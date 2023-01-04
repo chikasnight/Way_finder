@@ -1,7 +1,7 @@
 								
 								
 								
-								<h4 class="text-align-center">
+								<h4 style ="padding-left: 400px:">
 									GOT COMPLAINTS? EMAIL US HERE
 								</h4>
 								

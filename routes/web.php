@@ -29,3 +29,4 @@ Route::get('/location_details/{id}',[NewLocationController::class, 'details']);
 
 Route::get('/delete/{id}',[NewLocationController::class, 'delete']);
 Route::get('/logout',[AuthController::class,'logout']);
+Route::get('/search',[AuthController::class,'search']);

@@ -19,11 +19,13 @@
 
 				<!-- Header -->
 				@include('header')
+				
 				<!-- Menu -->
 				@include('menu')
-
 				<!-- Banner -->
 				@include('banner')
+
+				@include('_search')
 				<!-- Main -->
 				@include('main')
 				

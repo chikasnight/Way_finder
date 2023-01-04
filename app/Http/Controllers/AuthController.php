@@ -98,4 +98,19 @@ class AuthController extends Controller
         // redirect the login page
         return redirect('/');
     }
+
+    public function search(Request $request)
+    {
+        $search = $request->search;
+        $newLocation= NewLocation::where('location_state', 'LIKE', "%$search%")->get();
+        if ($newLocation) {
+            # code...
+            return view('home', compact('newLocation'));
+        } else {
+            # code...
+            // return redirect()->back();
+        }
+        
+
+    }   
 }

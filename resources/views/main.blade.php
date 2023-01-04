@@ -1,7 +1,7 @@
 <div id="main">
 
     <!-- one -->
-    @foreach($newLocation as $newLocation)
+    @forelse($newLocation as $newLocation)
         <section id="two" class="spotlights">
             <section>
                 <a href="{{url('location_details', $newLocation->id)}}" class="image">
@@ -25,8 +25,12 @@
                     </div>
                 </div>
             </section>
-        </section>    
-    @endforeach
+        </section>
+        @empty
+        <div>
+            <p> No Location in state yet</p>
+        </div>    
+    @endforelse
 
     <!-- Two -->
         <section id="three">

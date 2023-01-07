@@ -1,12 +1,12 @@
 								
 								
 								
-								<h4 style ="padding-left: 400px:">
+								<h4 style ="text-align: center; ">
 									GOT COMPLAINTS? EMAIL US HERE
 								</h4>
 								
 								
-								<form method="post" action="#">
+								<form method="post" action="{{url('send_email')}}">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -26,3 +26,4 @@
 										<li><input type="reset" value="Clear" /></li>
 									</ul>
 								</form>
+							

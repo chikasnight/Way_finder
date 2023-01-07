@@ -8,6 +8,8 @@ use App\Models\NewLocation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Notifications\EmailNotification;
+use Illuminate\Notifications\Notification;
 
 class AuthController extends Controller
 {
@@ -41,7 +43,7 @@ class AuthController extends Controller
         ]);
 
 
-        return view('home');
+        return redirect('/');
 
        
     }
@@ -113,4 +115,21 @@ class AuthController extends Controller
         
 
     }   
+
+    public function sendEmail(Request $request)
+    {
+        $user = User::where('id', '1')->get();
+
+        $details = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+            
+
+        ];
+
+        Notification::send($user, new EmailNotification($details));
+
+        return redirect('/');
+    }
 }

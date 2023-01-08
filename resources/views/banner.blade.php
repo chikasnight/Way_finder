@@ -1,8 +1,8 @@
 <!-- Note: The "styleN" class below should match that of the header element. -->
-                    <section id="banner" class="style2">
+                    <section id="banner" class="#">
 						<div class="inner">
 							<span class="image">
-								<img src="images/pic07.jpg" alt="" />
+								<img src="images/cover.jpg" alt="" />
 							</span>
 							<header class="major">
 								<h1>Navigating Your Way</h1>
